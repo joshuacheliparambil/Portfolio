@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
@@ -24,272 +24,7 @@
       }
     };
   </script>
-  <style>
-    .glass {
-      background: rgba(255, 255, 255, 0.82);
-      backdrop-filter: blur(18px);
-    }
-
-    .section-label {
-      color: #2563eb;
-      font-size: 0.78rem;
-      font-weight: 800;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-    }
-
-    .skill-card {
-      border: 1px solid #e2e8f0;
-      background: #fff;
-      border-radius: 18px;
-      padding: 1.25rem;
-      box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04);
-      transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
-    }
-
-    .skill-card:hover,
-    .project-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 20px 50px rgba(16, 24, 40, 0.10);
-      border-color: #bfdbfe;
-    }
-
-    .project-card {
-      border: 1px solid #e2e8f0;
-      background: #fff;
-      border-radius: 20px;
-      overflow: hidden;
-      transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
-    }
-
-    .tag {
-      display: inline-flex;
-      align-items: center;
-      border-radius: 999px;
-      background: #eff6ff;
-      color: #1d4ed8;
-      font-size: 0.78rem;
-      font-weight: 800;
-      padding: 0.38rem 0.72rem;
-    }
-
-    .contact-btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 999px;
-      border: 1px solid rgba(255, 255, 255, 0.22);
-      color: #fff;
-      font-weight: 800;
-      padding: 0.85rem 1.1rem;
-      transition: background 180ms ease, transform 180ms ease;
-    }
-
-    .contact-btn:hover {
-      background: rgba(255, 255, 255, 0.12);
-      transform: translateY(-2px);
-    }
-
-    .social-link {
-      position: relative;
-      display: grid;
-      height: 4.25rem;
-      width: 4.25rem;
-      place-items: center;
-      border-radius: 999px;
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      background: rgba(255, 255, 255, 0.06);
-      color: #fff;
-      transition: transform 220ms ease, background 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
-    }
-
-    .social-link:hover {
-      transform: translateY(-6px) scale(1.05);
-      border-color: rgba(255, 255, 255, 0.44);
-      background: rgba(255, 255, 255, 0.13);
-      box-shadow: 0 18px 38px rgba(0, 0, 0, 0.24);
-    }
-
-    .social-link svg {
-      height: 1.65rem;
-      width: 1.65rem;
-      transition: transform 220ms ease;
-    }
-
-    .social-link:hover svg {
-      transform: scale(1.08);
-    }
-
-    .social-tip {
-      pointer-events: none;
-      position: absolute;
-      bottom: -2.35rem;
-      left: 50%;
-      min-width: max-content;
-      transform: translateX(-50%) translateY(-4px);
-      border-radius: 999px;
-      background: #fff;
-      color: #101828;
-      font-size: 0.78rem;
-      font-weight: 900;
-      opacity: 0;
-      padding: 0.38rem 0.72rem;
-      transition: opacity 180ms ease, transform 180ms ease;
-    }
-
-    .social-link:hover .social-tip,
-    .social-link:focus-visible .social-tip {
-      opacity: 1;
-      transform: translateX(-50%) translateY(0);
-    }
-
-    .image-pop {
-      cursor: zoom-in;
-      transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
-    }
-
-    .image-pop:hover {
-      transform: translateY(-8px) scale(1.015);
-      border-color: #bfdbfe;
-      box-shadow: 0 28px 70px rgba(16, 24, 40, 0.16);
-    }
-
-    .image-pop img {
-      transition: transform 280ms ease, filter 280ms ease;
-    }
-
-    .image-pop:hover img {
-      transform: scale(1.045);
-      filter: saturate(1.08) contrast(1.03);
-    }
-
-    .modal-open {
-      overflow: hidden;
-    }
-
-    .hero-video {
-      position: absolute;
-      inset: 0;
-      height: 100%;
-      width: 100%;
-      object-fit: cover;
-      opacity: 0.34;
-      filter: saturate(1.08) contrast(1.02);
-    }
-
-    .hero-overlay {
-      position: absolute;
-      inset: 0;
-      background:
-        linear-gradient(90deg, rgba(247, 249, 252, 0.96) 0%, rgba(247, 249, 252, 0.84) 48%, rgba(247, 249, 252, 0.58) 100%),
-        radial-gradient(circle at 15% 15%, rgba(37, 99, 235, 0.16), transparent 28%),
-        radial-gradient(circle at 80% 10%, rgba(15, 118, 110, 0.16), transparent 30%);
-    }
-
-    .brand-link {
-      transition: transform 220ms ease;
-    }
-
-    .brand-link:hover {
-      transform: translateY(-2px);
-    }
-
-    .brand-name {
-      color: #101828;
-      transition: color 220ms ease, text-shadow 220ms ease;
-    }
-
-    .brand-link:hover .brand-name {
-      color: #2563eb;
-      text-shadow: 0 10px 24px rgba(37, 99, 235, 0.24);
-    }
-
-    .nav-link {
-      position: relative;
-      color: #475467;
-      transition: color 200ms ease, transform 200ms ease;
-    }
-
-    .nav-link::after {
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: -0.42rem;
-      height: 2px;
-      border-radius: 999px;
-      background: #2563eb;
-      content: "";
-      transform: scaleX(0);
-      transform-origin: center;
-      transition: transform 220ms ease;
-    }
-
-    .nav-link:hover {
-      color: #101828;
-      transform: translateY(-2px);
-    }
-
-    .nav-link:hover::after {
-      transform: scaleX(1);
-    }
-
-    .center-logo {
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      display: grid;
-      height: 3.25rem;
-      width: 3.25rem;
-      place-items: center;
-      overflow: hidden;
-      border-radius: 999px;
-      border: 1px solid #e2e8f0;
-      background: #fff;
-      box-shadow: 0 14px 34px rgba(16, 24, 40, 0.12);
-      transform: translate(-50%, -50%);
-      transition: transform 220ms ease, box-shadow 220ms ease;
-    }
-
-    .center-logo:hover {
-      transform: translate(-50%, -50%) scale(1.08) rotate(-2deg);
-      box-shadow: 0 18px 42px rgba(37, 99, 235, 0.18);
-    }
-
-    .center-logo img {
-      height: 100%;
-      width: 100%;
-      object-fit: cover;
-    }
-
-    .hero-profile-card {
-      transition: transform 260ms ease, box-shadow 260ms ease, border-color 260ms ease;
-    }
-
-    .hero-profile-card:hover {
-      transform: translateY(-10px) scale(1.018);
-      border-color: #bfdbfe;
-      box-shadow: 0 32px 80px rgba(16, 24, 40, 0.18);
-    }
-
-    .hero-profile-card img {
-      transition: transform 320ms ease, filter 320ms ease;
-    }
-
-    .hero-profile-card:hover img {
-      transform: scale(1.08) translateY(-14px);
-      filter: saturate(1.08) contrast(1.04);
-    }
-
-    .hero-profile-card .profile-panel {
-      transition: transform 260ms ease, background 260ms ease, box-shadow 260ms ease;
-    }
-
-    .hero-profile-card:hover .profile-panel {
-      transform: translateY(12px) scale(0.98);
-      background: rgba(255, 255, 255, 0.84);
-      box-shadow: 0 16px 42px rgba(16, 24, 40, 0.14);
-    }
-  </style>
+  <link rel="stylesheet" href="./style.css" />
 </head>
 
 <body class="bg-paper text-ink antialiased">
@@ -300,7 +35,7 @@
       </a>
 
       <a href="#home" class="center-logo" aria-label="Joshua Binoy logo">
-        <img src="assets/jb-logo.png" alt="Joshua Binoy logo" />
+        <img src="./assets/images/jb-logo.png" alt="Joshua Binoy logo" width="64" height="64" />
       </a>
 
       <div class="hidden items-center gap-7 text-sm font-bold text-slate-600 md:flex">
@@ -348,11 +83,10 @@
         loop
         playsinline
         preload="metadata"
-        poster="assets/bikewithjosh.jpeg"
+        poster="./assets/images/bikewithjosh.jpeg"
         aria-hidden="true"
       >
-        <source src="assets/hero-background.mp4" type="video/mp4" />
-        <source src="assets/hero-background.webm" type="video/webm" />
+        <source src="./assets/images/hero-background.mp4" type="video/mp4" />
       </video>
       <div class="hero-overlay"></div>
 
@@ -372,7 +106,7 @@
             <a href="#projects" class="rounded-full bg-brand px-6 py-3 text-sm font-black text-white shadow-soft transition hover:-translate-y-0.5 hover:bg-blue-700">
               View Projects
             </a>
-            <a href="resume.pdf" class="rounded-full border border-slate-300 bg-white px-6 py-3 text-sm font-black text-slate-900 transition hover:-translate-y-0.5 hover:border-brand hover:text-brand">
+            <a href="./assets/resume/Joshua_Binoy_Resume.pdf" download class="rounded-full border border-slate-300 bg-white px-6 py-3 text-sm font-black text-slate-900 transition hover:-translate-y-0.5 hover:border-brand hover:text-brand">
               Download Resume
             </a>
           </div>
@@ -385,8 +119,11 @@
           <div class="hero-profile-card relative overflow-hidden rounded-[2rem] border border-slate-200 bg-white p-4 shadow-soft">
             <div class="overflow-hidden rounded-[1.5rem]">
               <img
-                src="assets/joshportfolio.jpeg"
+                src="./assets/images/joshportfolio.jpeg"
                 alt="Joshua Binoy"
+                width="900"
+                height="1200"
+                fetchpriority="high"
                 class="h-[34rem] w-full object-cover object-[58%_center]"
               />
             </div>
@@ -395,15 +132,15 @@
               <h2 class="mt-2 text-2xl font-black">Joshua Binoy</h2>
               <div class="mt-4 grid gap-3 text-center sm:grid-cols-3">
                 <div class="rounded-2xl bg-slate-50 p-3">
-                  <p class="text-xl font-black text-brand">📂</p>
+                  <p class="text-xl font-black text-brand">ðŸ“‚</p>
                   <p class="text-xs font-bold text-slate-500">Real Projects</p>
                 </div>
                 <div class="rounded-2xl bg-slate-50 p-3">
-                  <p class="text-xl font-black text-teal">📊</p>
+                  <p class="text-xl font-black text-teal">ðŸ“Š</p>
                   <p class="text-xs font-bold text-slate-500">Business Insights</p>
                 </div>
                 <div class="rounded-2xl bg-slate-50 p-3">
-                  <p class="text-xl font-black text-amber">⚡</p>
+                  <p class="text-xl font-black text-amber">âš¡</p>
                   <p class="text-xs font-bold text-slate-500">Data Driven</p>
                 </div>
               </div>
@@ -553,16 +290,19 @@
         <div class="grid gap-4 sm:grid-cols-2">
           <figure
             class="image-pop overflow-hidden rounded-[2rem] border border-slate-200 bg-white p-3 shadow-soft"
-            onclick="openImageModal('assets/bikewithjosh.jpeg', 'Joshua with a bike in the mountains')"
+            onclick="openImageModal('./assets/images/bikewithjosh.jpeg', 'Joshua with a bike in the mountains')"
             tabindex="0"
             role="button"
             aria-label="Open mountain bike photo"
-            onkeydown="handleImageKey(event, 'assets/bikewithjosh.jpeg', 'Joshua with a bike in the mountains')"
+            onkeydown="handleImageKey(event, './assets/images/bikewithjosh.jpeg', 'Joshua with a bike in the mountains')"
           >
             <div class="overflow-hidden rounded-[1.5rem]">
               <img
-                src="assets/bikewithjosh.jpeg"
+                src="./assets/images/bikewithjosh.jpeg"
                 alt="Joshua with a bike in the mountains"
+                width="900"
+                height="1200"
+                loading="lazy"
                 class="h-96 w-full object-cover object-[45%_center]"
               />
             </div>
@@ -572,16 +312,19 @@
           <div class="grid gap-4">
             <figure
               class="image-pop overflow-hidden rounded-[2rem] border border-slate-200 bg-white p-3 shadow-soft"
-              onclick="openImageModal('assets/bike.jpeg', 'Royal Enfield bike')"
+              onclick="openImageModal('./assets/images/bike.jpeg', 'Royal Enfield bike')"
               tabindex="0"
               role="button"
               aria-label="Open Royal Enfield bike photo"
-              onkeydown="handleImageKey(event, 'assets/bike.jpeg', 'Royal Enfield bike')"
+              onkeydown="handleImageKey(event, './assets/images/bike.jpeg', 'Royal Enfield bike')"
             >
               <div class="grid h-64 place-items-center overflow-hidden rounded-[1.5rem] bg-slate-100">
                 <img
-                  src="assets/bike.jpeg"
+                  src="./assets/images/bike.jpeg"
                   alt="Royal Enfield bike"
+                  width="900"
+                  height="1200"
+                  loading="lazy"
                   class="h-full w-full object-contain"
                 />
               </div>
@@ -692,94 +435,7 @@
     Copyright 2026 Joshua Binoy. Built with data, design, and discipline.
   </footer>
 
-  <script>
-    const menu = document.getElementById("mobileMenu");
-    const menuButton = document.getElementById("menuButton");
-    const imageModal = document.getElementById("imageModal");
-    const modalImage = document.getElementById("modalImage");
-
-    function toggleMenu() {
-      const isHidden = menu.classList.toggle("hidden");
-      menuButton.setAttribute("aria-expanded", String(!isHidden));
-    }
-
-    function closeMenu() {
-      menu.classList.add("hidden");
-      menuButton.setAttribute("aria-expanded", "false");
-    }
-
-    function openImageModal(src, alt) {
-      modalImage.src = src;
-      modalImage.alt = alt;
-      imageModal.classList.remove("hidden");
-      imageModal.classList.add("flex");
-      imageModal.setAttribute("aria-hidden", "false");
-      document.body.classList.add("modal-open");
-    }
-
-    function closeImageModal() {
-      imageModal.classList.add("hidden");
-      imageModal.classList.remove("flex");
-      imageModal.setAttribute("aria-hidden", "true");
-      document.body.classList.remove("modal-open");
-      modalImage.src = "";
-    }
-
-    function handleImageKey(event, src, alt) {
-      if (event.key === "Enter" || event.key === " ") {
-        event.preventDefault();
-        openImageModal(src, alt);
-      }
-    }
-
-    document.addEventListener("keydown", (event) => {
-      if (event.key === "Escape" && !imageModal.classList.contains("hidden")) {
-        closeImageModal();
-      }
-    });
-
-    let audioContext;
-
-    function getAudioContext() {
-      if (!audioContext) {
-        audioContext = new (window.AudioContext || window.webkitAudioContext)();
-      }
-      return audioContext;
-    }
-
-    function playUiSound(type = "hover") {
-      const ctx = getAudioContext();
-      if (ctx.state === "suspended") {
-        ctx.resume();
-      }
-      const oscillator = ctx.createOscillator();
-      const gain = ctx.createGain();
-      const now = ctx.currentTime;
-      const isClick = type === "click";
-
-      oscillator.type = "sine";
-      oscillator.frequency.setValueAtTime(isClick ? 520 : 740, now);
-      oscillator.frequency.exponentialRampToValueAtTime(isClick ? 360 : 620, now + 0.08);
-
-      gain.gain.setValueAtTime(0.0001, now);
-      gain.gain.exponentialRampToValueAtTime(isClick ? 0.045 : 0.018, now + 0.01);
-      gain.gain.exponentialRampToValueAtTime(0.0001, now + (isClick ? 0.12 : 0.07));
-
-      oscillator.connect(gain);
-      gain.connect(ctx.destination);
-      oscillator.start(now);
-      oscillator.stop(now + (isClick ? 0.13 : 0.08));
-    }
-
-    function wireUiSounds() {
-      const soundTargets = document.querySelectorAll("a, button, .image-pop, .skill-card, .project-card");
-      soundTargets.forEach((target) => {
-        target.addEventListener("pointerenter", () => playUiSound("hover"));
-        target.addEventListener("click", () => playUiSound("click"));
-      });
-    }
-
-    wireUiSounds();
-  </script>
+  <script src="./script.js" defer></script>
 </body>
 </html>
+
