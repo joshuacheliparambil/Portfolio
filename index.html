@@ -3,22 +3,24 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Joshua Binoy - Data Analyst portfolio with Power BI, SQL, Python, Excel, dashboards, and business insights." />
-  <title>Joshua Binoy | Data Analyst Portfolio</title>
+  <meta name="description" content="Joshua Binoy Cheliparambil - SDE 1 Java Backend portfolio featuring Java, Spring Boot, REST APIs, SQL, JavaScript, React, backend projects, and interactive engineering work." />
+  <title>Joshua Binoy | SDE 1 Java Backend Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
           colors: {
-            ink: "#101828",
-            paper: "#f7f9fc",
-            brand: "#2563eb",
-            teal: "#0f766e",
-            amber: "#f59e0b"
+            ink: "#0b1220",
+            paper: "#f6f8fb",
+            brand: "#1a73e8",
+            mint: "#00a884",
+            flame: "#fbbc04",
+            coral: "#ff5a5f"
           },
           boxShadow: {
-            soft: "0 20px 50px rgba(16, 24, 40, 0.10)"
+            soft: "0 24px 70px rgba(11, 18, 32, 0.14)",
+            glow: "0 22px 60px rgba(26, 115, 232, 0.24)"
           }
         }
       }
@@ -29,374 +31,214 @@
 
 <body class="bg-paper text-ink antialiased">
   <header class="fixed inset-x-0 top-0 z-50 border-b border-slate-200/80 glass">
-    <nav class="relative mx-auto flex max-w-6xl items-center justify-between px-5 py-4">
+    <nav class="relative mx-auto flex max-w-7xl items-center justify-between px-5 py-4">
       <a href="#home" class="brand-link text-lg font-black tracking-normal">
         Joshua <span class="brand-name">Binoy</span>
       </a>
 
       <a href="#home" class="center-logo" aria-label="Joshua Binoy logo">
-        <img src="./ChatGPT Image May 30, 2026, 05_04_46 AM.png" alt="Joshua Binoy logo" width="64" height="64" />
+        <img src="./assets/images/jb-logo.png" alt="Joshua Binoy logo" width="64" height="64" />
       </a>
 
-      <div class="hidden items-center gap-7 text-sm font-bold text-slate-600 md:flex">
+      <div class="hidden items-center gap-6 text-sm font-bold text-slate-600 md:flex">
         <a class="nav-link" href="#about">About</a>
         <a class="nav-link" href="#skills">Skills</a>
         <a class="nav-link" href="#projects">Projects</a>
-        <a class="nav-link" href="#bike">Bike Passion</a>
+        <a class="nav-link" href="#game">Game</a>
         <a class="nav-link" href="#contact">Contact</a>
       </div>
 
-      <button
-        type="button"
-        onclick="toggleMenu()"
-        class="grid h-10 w-10 place-items-center rounded-full border border-slate-300 bg-white text-slate-900 md:hidden"
-        aria-label="Toggle navigation menu"
-        aria-controls="mobileMenu"
-        aria-expanded="false"
-        id="menuButton"
-      >
-        <span class="space-y-1.5">
-          <span class="block h-0.5 w-5 bg-current"></span>
-          <span class="block h-0.5 w-5 bg-current"></span>
-          <span class="block h-0.5 w-5 bg-current"></span>
-        </span>
+      <button type="button" onclick="toggleMenu()" class="grid h-10 w-10 place-items-center rounded-full border border-slate-300 bg-white text-slate-900 md:hidden" aria-label="Toggle navigation menu" aria-controls="mobileMenu" aria-expanded="false" id="menuButton">
+        <span class="space-y-1.5"><span class="block h-0.5 w-5 bg-current"></span><span class="block h-0.5 w-5 bg-current"></span><span class="block h-0.5 w-5 bg-current"></span></span>
       </button>
     </nav>
 
     <div id="mobileMenu" class="hidden border-t border-slate-200 bg-white px-5 py-4 md:hidden">
-      <div class="mx-auto grid max-w-6xl gap-3 text-sm font-bold text-slate-700">
+      <div class="mx-auto grid max-w-7xl gap-3 text-sm font-bold text-slate-700">
         <a href="#about" onclick="closeMenu()">About</a>
         <a href="#skills" onclick="closeMenu()">Skills</a>
         <a href="#projects" onclick="closeMenu()">Projects</a>
-        <a href="#bike" onclick="closeMenu()">Bike Passion</a>
+        <a href="#game" onclick="closeMenu()">Game</a>
         <a href="#contact" onclick="closeMenu()">Contact</a>
       </div>
     </div>
   </header>
 
   <main id="home">
-    <section class="relative overflow-hidden pt-28">
-      <video
-        class="hero-video"
-        autoplay
-        muted
-        loop
-        playsinline
-        preload="metadata"
-        poster="./bikewithjosh.jpeg"
-        aria-hidden="true"
-      >
-        <source src="./portfolio video.mp4" type="video/mp4" />
+    <section class="hero-shell relative overflow-hidden pt-28">
+      <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="./assets/images/bikewithjosh.jpeg" aria-hidden="true">
+        <source src="./assets/images/hero-background.mp4" type="video/mp4" />
       </video>
       <div class="hero-overlay"></div>
+      <div class="hero-intel" id="heroIntel" aria-hidden="true">
+        <div class="intel-top">
+          <span class="pulse-dot"></span>
+          <span>Recruiter Console</span>
+          <strong>SDE-1 fit scan</strong>
+        </div>
+        <div class="trace-stack">
+          <div class="trace-line"><span>GET</span><p>/candidate/joshua</p><strong>200 OK</strong></div>
+          <div class="trace-line"><span>JAVA</span><p>OOP + DSA + REST</p><strong>clean</strong></div>
+          <div class="trace-line"><span>SQL</span><p>50K+ rows validated</p><strong>sharp</strong></div>
+        </div>
+        <div class="signal-grid">
+          <span>Backend</span>
+          <span>Data</span>
+          <span>Debugging</span>
+        </div>
+      </div>
 
-      <div class="relative mx-auto grid min-h-[calc(100vh-7rem)] max-w-6xl items-center gap-12 px-5 py-14 lg:grid-cols-[1.05fr_0.95fr]">
+      <div class="relative mx-auto grid min-h-[calc(100vh-7rem)] max-w-7xl items-center gap-12 px-5 py-14 lg:grid-cols-[1.05fr_0.95fr]">
         <div>
           <p class="mb-5 inline-flex rounded-full border border-blue-100 bg-white px-4 py-2 text-sm font-extrabold text-brand shadow-sm">
-            Data Analyst | Power BI | SQL | Python
+            SDE 1 Candidate | Java Backend | REST APIs | SQL
           </p>
-          <h1 class="max-w-3xl text-4xl font-black leading-tight tracking-normal text-ink sm:text-5xl lg:text-6xl">
-            Data Analyst Turning Complex Data Into Business Growth
+          <h1 class="max-w-4xl text-4xl font-black leading-tight tracking-normal text-ink sm:text-5xl lg:text-6xl">
+            Software engineer building clean backend systems with product-level discipline.
           </h1>
           <p class="mt-6 max-w-2xl text-lg leading-8 text-slate-600">
-            Engineering graduate passionate about data analytics and business intelligence. I build dashboards, automate reporting, and uncover insights using SQL, Power BI, Excel, and Python to solve real-world business problems.
+            I am Joshua Binoy Cheliparambil, a B.E. Information Technology student moving from analytics into software development. I bring Java, OOP, DSA, SQL, REST API thinking, and real-world data pipeline experience into SDE-1 work.
           </p>
 
           <div class="mt-8 flex flex-wrap gap-3">
-            <a href="#projects" class="rounded-full bg-brand px-6 py-3 text-sm font-black text-white shadow-soft transition hover:-translate-y-0.5 hover:bg-blue-700">
-              View Projects
-            </a>
-            <a href="./resume.pdf" download class="rounded-full border border-slate-300 bg-white px-6 py-3 text-sm font-black text-slate-900 transition hover:-translate-y-0.5 hover:border-brand hover:text-brand">
-              Download Resume
-            </a>
+            <a href="#projects" class="rounded-full bg-brand px-6 py-3 text-sm font-black text-white shadow-glow transition hover:-translate-y-0.5 hover:bg-blue-700">Explore Work</a>
+            <a href="./assets/resume/Joshua_Binoy_SDE1_Resume.docx" download class="rounded-full border border-slate-300 bg-white px-6 py-3 text-sm font-black text-slate-900 transition hover:-translate-y-0.5 hover:border-brand hover:text-brand">Download Resume</a>
+            <a href="#game" class="rounded-full border border-slate-300 bg-white px-6 py-3 text-sm font-black text-slate-900 transition hover:-translate-y-0.5 hover:border-mint hover:text-mint">Play Debug Game</a>
+          </div>
+
+          <div class="mt-10 grid max-w-2xl gap-3 sm:grid-cols-3">
+            <div class="metric"><span>50K+</span><p>Rows cleaned and modeled</p></div>
+            <div class="metric"><span>Java</span><p>OOP, collections, exceptions</p></div>
+            <div class="metric"><span>API</span><p>REST patterns and Firebase</p></div>
           </div>
         </div>
 
         <div class="relative">
-          <div class="absolute -left-4 top-10 hidden h-24 w-24 rounded-3xl bg-blue-100 lg:block"></div>
-          <div class="absolute -right-5 bottom-10 hidden h-28 w-28 rounded-full bg-teal-100 lg:block"></div>
-
-          <div class="hero-profile-card relative overflow-hidden rounded-[2rem] border border-slate-200 bg-white p-4 shadow-soft">
-            <div class="overflow-hidden rounded-[1.5rem]">
-              <img
-                src="./joshportfolio.jpeg"
-                alt="Joshua Binoy"
-                width="900"
-                height="1200"
-                fetchpriority="high"
-                class="h-[34rem] w-full object-cover object-[58%_center]"
-              />
+          <div class="code-orbit" aria-hidden="true">{ }</div>
+          <div class="hero-profile-card relative overflow-hidden rounded-[1.75rem] border border-slate-200 bg-white p-4 shadow-soft">
+            <div class="overflow-hidden rounded-[1.25rem]">
+              <img src="./assets/images/joshportfolio.jpeg" alt="Joshua Binoy" width="900" height="1200" fetchpriority="high" class="hero-portrait h-[34rem] w-full object-cover" />
             </div>
-            <div class="profile-panel absolute bottom-8 left-8 right-8 rounded-3xl bg-white/90 p-5 shadow-soft backdrop-blur">
-              <p class="text-sm font-black uppercase tracking-widest text-brand">Data Analyst</p>
+            <div class="profile-panel mt-4 rounded-[1.5rem] bg-white p-5 shadow-soft">
+              <p class="text-sm font-black uppercase tracking-widest text-brand">Java Backend Engineer</p>
               <h2 class="mt-2 text-2xl font-black">Joshua Binoy</h2>
               <div class="mt-4 grid gap-3 text-center sm:grid-cols-3">
-                <div class="rounded-2xl bg-slate-50 p-3">
-                  <p class="text-xl font-black text-brand">📂</p>
-                  <p class="text-xs font-bold text-slate-500">Real Projects</p>
-                </div>
-                <div class="rounded-2xl bg-slate-50 p-3">
-                  <p class="text-xl font-black text-teal">📊</p>
-                  <p class="text-xs font-bold text-slate-500">Business Insights</p>
-                </div>
-                <div class="rounded-2xl bg-slate-50 p-3">
-                  <p class="text-xl font-black text-amber">⚡</p>
-                  <p class="text-xs font-bold text-slate-500">Data Driven</p>
-                </div>
+                <div class="mini-stat"><p>OOP</p><span>Clean structure</span></div>
+                <div class="mini-stat"><p>SQL</p><span>Data access</span></div>
+                <div class="mini-stat"><p>DSA</p><span>Problem solving</span></div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
+
+    <section id="about" class="border-y border-slate-200 bg-white py-20">
+      <div class="mx-auto grid max-w-7xl gap-10 px-5 md:grid-cols-[0.75fr_1.25fr]">
+        <div>
+          <p class="section-label">About</p>
+          <h2 class="mt-3 text-3xl font-black tracking-normal">SDE mindset, analytics proof, backend direction.</h2>
+        </div>
+        <div class="space-y-5 text-lg leading-8 text-slate-600">
+          <p>I write structured code and think in systems: inputs, validation, transformation, storage, APIs, and reliable output. My analytics background gives me a practical edge because I have already worked with messy datasets, reporting pipelines, correctness checks, and stakeholder-ready results.</p>
+          <p>My target role is SDE-1 with a Java backend focus. I am building on Core Java, Spring Boot fundamentals, REST APIs, JDBC, Maven, Git/GitHub, SQL, and React basics while continuing to strengthen DSA, OOP, DBMS, OS basics, and clean code habits.</p>
+          <p>What I bring is simple: curiosity, consistency, fast learning, and the discipline to debug until the system behaves the way it should.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="py-20">
+      <div class="mx-auto max-w-7xl px-5">
+        <div class="flex flex-col justify-between gap-4 md:flex-row md:items-end">
+          <div>
+            <p class="section-label">Engineering Stack</p>
+            <h2 class="mt-3 text-3xl font-black tracking-normal">Tools I use to build, ship, and debug</h2>
+          </div>
+          <p class="max-w-xl text-slate-600">Skill icons are loaded from web CDN sources, with a stack focused on SDE-1 Java backend work and full-stack foundations.</p>
+        </div>
+
+        <div class="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <article class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java icon" /><h3>Java</h3><p>Core Java, OOP, collections, exception handling, and service logic.</p></article>
+          <article class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" alt="Spring icon" /><h3>Spring Boot</h3><p>Fundamentals of REST controllers, service layers, and backend structure.</p></article>
+          <article class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL icon" /><h3>SQL / MySQL</h3><p>Joins, grouping, reporting queries, validation, and data access thinking.</p></article>
+          <article class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript icon" /><h3>JavaScript</h3><p>DOM work, validation, interactions, game logic, and browser behavior.</p></article>
+          <article class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React icon" /><h3>React</h3><p>Component basics, props/state thinking, and responsive UI composition.</p></article>
+          <article class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python icon" /><h3>Python</h3><p>Pandas pipelines, clustering workflows, and repeatable data processing.</p></article>
+          <article class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firebase icon" /><h3>Firebase</h3><p>NoSQL storage exposure and API-driven web application integration.</p></article>
+          <article class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git icon" /><h3>Git / GitHub</h3><p>Version control, collaboration, documentation, and code review readiness.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="border-y border-slate-200 bg-white py-20">
+      <div class="mx-auto max-w-7xl px-5">
+        <p class="section-label">Selected Work</p>
+        <h2 class="mt-3 text-3xl font-black tracking-normal">Projects reframed for engineering impact</h2>
+
+        <div class="mt-10 grid gap-6 lg:grid-cols-3">
+          <article class="project-card">
+            <div class="project-visual java-visual"><span>class EVService { }</span></div>
+            <div class="p-6"><h3 class="text-xl font-black">Global EV Market Intelligence Dashboard</h3><p class="mt-3 leading-7 text-slate-600">Ingested and cleaned 50,000+ rows with SQL and Power Query, modeled KPIs, and applied DAX logic that mirrors backend reporting modules.</p><div class="mt-5 flex flex-wrap gap-2"><span class="tag">Java Logic</span><span class="tag">SQL</span><span class="tag">Power BI</span></div></div>
+          </article>
+          <article class="project-card">
+            <div class="project-visual data-visual"><span>RFM -> K-Means -> Segments</span></div>
+            <div class="p-6"><h3 class="text-xl font-black">E-Commerce Customer Segmentation Engine</h3><p class="mt-3 leading-7 text-slate-600">Built a modular Python pipeline over 25,000+ customer records using RFM analysis and K-Means, showing clean data-processing design.</p><div class="mt-5 flex flex-wrap gap-2"><span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">SQL</span></div></div>
+          </article>
+          <article class="project-card">
+            <div class="project-visual web-visual"><span>validate() -> store() -> respond()</span></div>
+            <div class="p-6"><h3 class="text-xl font-black">Web Application with Form Validation</h3><p class="mt-3 leading-7 text-slate-600">Created responsive forms, client-side validation, and Firebase storage while learning request-response flows and API-driven structure.</p><div class="mt-5 flex flex-wrap gap-2"><span class="tag">HTML</span><span class="tag">JavaScript</span><span class="tag">Firebase</span></div></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="game" class="py-20">
+      <div class="mx-auto grid max-w-7xl gap-10 px-5 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+        <div>
+          <p class="section-label">Interactive Game</p>
+          <h2 class="mt-3 text-3xl font-black tracking-normal">Bug Hunt: ship clean code under pressure.</h2>
+          <p class="mt-5 text-lg leading-8 text-slate-600">A small JavaScript game inspired by Java debugging: collect green commits, avoid red bugs, and race the timer. It demonstrates event handling, state updates, keyboard controls, collision detection, scoring, and sound design in a playful way.</p>
+          <div class="mt-6 flex flex-wrap gap-3"><button type="button" class="action-btn" onclick="startGame()">Start Game</button><button type="button" class="ghost-btn" onclick="resetGame()">Reset</button></div>
+        </div>
+        <div class="game-panel">
+          <div class="game-top"><span id="gameScore">Score 0</span><span id="gameTime">Time 30</span><span id="gameStatus">Ready</span></div>
+          <canvas id="bugGame" width="720" height="420" aria-label="Bug Hunt mini game"></canvas>
+          <div class="game-controls"><button type="button" onclick="movePlayer('left')">Left</button><button type="button" onclick="movePlayer('up')">Up</button><button type="button" onclick="movePlayer('down')">Down</button><button type="button" onclick="movePlayer('right')">Right</button></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="bike" class="border-y border-slate-200 bg-white py-20">
+      <div class="mx-auto grid max-w-7xl items-center gap-10 px-5 lg:grid-cols-[0.95fr_1.05fr]">
+        <div><p class="section-label">Beyond Code</p><h2 class="mt-3 text-3xl font-black tracking-normal">Rider discipline, engineering focus.</h2><p class="mt-5 text-lg leading-8 text-slate-600">Riding has trained patience, awareness, calm decision-making, and respect for systems. I bring that same steady focus into debugging, learning, and building software.</p></div>
+        <div class="grid gap-4 sm:grid-cols-2">
+          <figure class="image-pop overflow-hidden rounded-[1.75rem] border border-slate-200 bg-white p-3 shadow-soft" onclick="openImageModal('./assets/images/bike.jpeg', 'Royal Enfield bike')" tabindex="0" role="button" aria-label="Open Royal Enfield bike photo" onkeydown="handleImageKey(event, './assets/images/bike.jpeg', 'Royal Enfield bike')"><div class="grid min-h-[28rem] place-items-center overflow-hidden rounded-[1.25rem] bg-slate-100"><img src="./assets/images/bike.jpeg" alt="Royal Enfield bike" width="900" height="1200" loading="lazy" class="bike-full-photo h-full max-h-[40rem] w-full object-contain" /></div><figcaption class="px-2 pb-2 pt-4 text-sm font-bold text-slate-500">Focus, patience, and momentum.</figcaption></figure>
+          <div class="grid gap-4"><figure class="image-pop overflow-hidden rounded-[1.75rem] border border-slate-200 bg-white p-3 shadow-soft" onclick="openImageModal('./assets/images/bikewithjosh.jpeg', 'Joshua with a bike in the mountains')" tabindex="0" role="button" aria-label="Open mountain bike photo" onkeydown="handleImageKey(event, './assets/images/bikewithjosh.jpeg', 'Joshua with a bike in the mountains')"><div class="grid h-64 place-items-center overflow-hidden rounded-[1.25rem] bg-slate-100"><img src="./assets/images/bikewithjosh.jpeg" alt="Joshua with a bike in the mountains" width="900" height="1200" loading="lazy" class="bike-photo h-full w-full object-cover" /></div></figure><div class="rounded-[1.75rem] bg-ink p-6 text-white shadow-soft"><p class="text-sm font-black uppercase tracking-widest text-blue-200">Engineer mindset</p><div class="mt-5 grid grid-cols-3 gap-3"><div><p class="text-xl font-black text-flame">Focus</p><p class="mt-1 text-xs font-semibold text-slate-300">Stay aware</p></div><div><p class="text-xl font-black text-blue-200">Calm</p><p class="mt-1 text-xs font-semibold text-slate-300">Think clear</p></div><div><p class="text-xl font-black text-mint">Drive</p><p class="mt-1 text-xs font-semibold text-slate-300">Keep moving</p></div></div></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="py-20">
+      <div class="mx-auto max-w-7xl px-5">
+        <div class="grid gap-8 rounded-[1.75rem] bg-ink p-7 text-white shadow-soft md:grid-cols-[0.9fr_1.1fr] md:p-10">
+          <div><p class="text-sm font-black uppercase tracking-widest text-blue-200">Get In Touch</p><h2 class="mt-3 text-3xl font-black tracking-normal">Open to SDE-1 Java backend opportunities.</h2><p class="mt-4 leading-7 text-slate-300">Mumbai, Maharashtra  -  +91 9136020220  -  joshuacheliparambilb@gmail.com</p></div>
+          <div class="flex flex-wrap items-center gap-4 pb-8 md:self-end">
+            <a href="https://www.linkedin.com/in/joshua-binoyc-a6b527412/" target="_blank" rel="noreferrer" class="social-link" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.94 8.98H3.75V20h3.19V8.98ZM5.35 7.48a1.85 1.85 0 1 0 0-3.7 1.85 1.85 0 0 0 0 3.7ZM20.25 20h-3.18v-5.36c0-1.28-.02-2.92-1.78-2.92-1.78 0-2.05 1.39-2.05 2.83V20h-3.18V8.98h3.05v1.5h.04c.42-.8 1.46-1.65 3.01-1.65 3.22 0 3.82 2.12 3.82 4.88V20h.27Z"></path></svg><span class="social-tip">LinkedIn</span></a>
+            <a href="mailto:joshuacheliparambilb@gmail.com" class="social-link" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3 7 9 6 9-6"></path></svg><span class="social-tip">Email</span></a>
+            <a href="https://github.com/" target="_blank" rel="noreferrer" class="social-link" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .9a11.1 11.1 0 0 0-3.5 21.63c.56.1.76-.24.76-.53v-2.06c-3.1.67-3.75-1.32-3.75-1.32-.5-1.29-1.23-1.63-1.23-1.63-1-.68.08-.67.08-.67 1.12.08 1.7 1.15 1.7 1.15.99 1.7 2.6 1.2 3.23.92.1-.72.39-1.2.7-1.48-2.47-.28-5.07-1.24-5.07-5.5 0-1.22.43-2.21 1.15-2.99-.12-.28-.5-1.41.1-2.95 0 0 .94-.3 3.06 1.14a10.5 10.5 0 0 1 5.56 0c2.12-1.44 3.05-1.14 3.05-1.14.61 1.54.23 2.67.12 2.95.72.78 1.15 1.77 1.15 2.99 0 4.27-2.61 5.21-5.1 5.49.4.35.76 1.03.76 2.08V22c0 .29.2.64.77.53A11.1 11.1 0 0 0 12 .9Z"></path></svg><span class="social-tip">GitHub</span></a>
+            <a href="./assets/resume/Joshua_Binoy_SDE1_Resume.docx" download class="contact-resume">Resume</a>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <section id="about" class="border-y border-slate-200 bg-white py-20">
-    <div class="mx-auto grid max-w-6xl gap-10 px-5 md:grid-cols-[0.75fr_1.25fr]">
-      <div>
-        <p class="section-label">About</p>
-        <h2 class="mt-3 text-3xl font-black tracking-normal">Helping businesses make better decisions through data.</h2>
-      </div>
-      <div class="space-y-5 text-lg leading-8 text-slate-600">
-        <p>
-          I am an aspiring Data Analyst with a passion for turning complex data into clear, actionable insights. My work combines data cleaning, analysis, visualization, and storytelling to help stakeholders understand what matters most.
-        </p>
-        <p>
-          Through practical projects in Power BI, SQL, Python, and Excel, I have developed experience creating dashboards, tracking KPIs, and extracting insights that support business growth and decision-making.
-        </p>
-        <p>
-          My goal is to contribute to data-driven teams while continuously learning and building impactful analytics solutions.
-        </p>
-      </div>
-    </div>
-  </section>
+  <div id="imageModal" class="fixed inset-0 z-[100] hidden items-center justify-center bg-slate-950/85 p-4 backdrop-blur-sm" onclick="closeImageModal()" aria-hidden="true"><div class="relative max-h-[92vh] w-full max-w-5xl" onclick="event.stopPropagation()"><button type="button" onclick="closeImageModal()" class="absolute -right-2 -top-12 grid h-10 w-10 place-items-center rounded-full bg-white text-xl font-black text-ink shadow-soft transition hover:scale-105" aria-label="Close image preview">x</button><img id="modalImage" src="" alt="" class="max-h-[88vh] w-full rounded-[1.5rem] object-contain shadow-soft" /></div></div>
 
-  <section id="skills" class="py-20">
-    <div class="mx-auto max-w-6xl px-5">
-      <div class="flex flex-col justify-between gap-4 md:flex-row md:items-end">
-        <div>
-          <p class="section-label">Skills</p>
-          <h2 class="mt-3 text-3xl font-black tracking-normal">Tools I work with</h2>
-        </div>
-        <p class="max-w-xl text-slate-600">A focused stack for cleaning, analyzing, visualizing, and communicating business data.</p>
-      </div>
-
-      <div class="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-        <div class="skill-card">
-          <h3 class="font-black">Excel</h3>
-          <p class="mt-3 text-sm leading-6 text-slate-600">Pivot tables, formulas, reporting, and analysis workflows.</p>
-        </div>
-        <div class="skill-card">
-          <h3 class="font-black">SQL</h3>
-          <p class="mt-3 text-sm leading-6 text-slate-600">Joins, filtering, grouping, business queries, and data extraction.</p>
-        </div>
-        <div class="skill-card">
-          <h3 class="font-black">Power BI</h3>
-          <p class="mt-3 text-sm leading-6 text-slate-600">Dashboards, KPIs, visuals, measures, and stakeholder reports.</p>
-        </div>
-        <div class="skill-card">
-          <h3 class="font-black">Python</h3>
-          <p class="mt-3 text-sm leading-6 text-slate-600">Pandas, NumPy, cleaning, exploration, and repeatable analysis.</p>
-        </div>
-        <div class="skill-card">
-          <h3 class="font-black">Data Cleaning</h3>
-          <p class="mt-3 text-sm leading-6 text-slate-600">Handling missing values, formats, duplicates, and consistency.</p>
-        </div>
-        <div class="skill-card">
-          <h3 class="font-black">Dashboards</h3>
-          <p class="mt-3 text-sm leading-6 text-slate-600">Designing views that make performance easy to understand.</p>
-        </div>
-        <div class="skill-card">
-          <h3 class="font-black">Storytelling</h3>
-          <p class="mt-3 text-sm leading-6 text-slate-600">Explaining insights clearly with context and next steps.</p>
-        </div>
-        <div class="skill-card">
-          <h3 class="font-black">Git & Tools</h3>
-          <p class="mt-3 text-sm leading-6 text-slate-600">Version control, documentation, and project organization.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="projects" class="border-y border-slate-200 bg-white py-20">
-    <div class="mx-auto max-w-6xl px-5">
-      <p class="section-label">Projects</p>
-      <h2 class="mt-3 text-3xl font-black tracking-normal">Selected analytics work</h2>
-
-      <div class="mt-10 grid gap-6 lg:grid-cols-3">
-        <article class="project-card">
-          <div class="h-36 bg-gradient-to-br from-blue-600 via-sky-400 to-teal-300 p-5">
-            <div class="h-full rounded-2xl border border-white/30 bg-white/20"></div>
-          </div>
-          <div class="p-6">
-            <h3 class="text-xl font-black">Sales Dashboard</h3>
-            <p class="mt-3 leading-7 text-slate-600">Power BI dashboard showing sales, profit, regional performance, and KPI trends.</p>
-            <div class="mt-5 flex flex-wrap gap-2">
-              <span class="tag">Power BI</span>
-              <span class="tag">KPI</span>
-            </div>
-          </div>
-        </article>
-
-        <article class="project-card">
-          <div class="h-36 bg-gradient-to-br from-slate-900 via-slate-600 to-amber-300 p-5">
-            <div class="grid h-full grid-cols-4 items-end gap-2 rounded-2xl border border-white/30 bg-white/15 p-4">
-              <div class="h-10 rounded bg-white/70"></div>
-              <div class="h-16 rounded bg-white/70"></div>
-              <div class="h-8 rounded bg-white/70"></div>
-              <div class="h-20 rounded bg-white/70"></div>
-            </div>
-          </div>
-          <div class="p-6">
-            <h3 class="text-xl font-black">Customer Churn Analysis</h3>
-            <p class="mt-3 leading-7 text-slate-600">Python analysis exploring customer behavior, churn patterns, and retention signals.</p>
-            <div class="mt-5 flex flex-wrap gap-2">
-              <span class="tag">Python</span>
-              <span class="tag">Pandas</span>
-            </div>
-          </div>
-        </article>
-
-        <article class="project-card">
-          <div class="h-36 bg-gradient-to-br from-teal-600 via-emerald-300 to-blue-100 p-5">
-            <div class="h-full rounded-2xl border border-white/40 bg-white/25 p-4">
-              <div class="mb-3 h-3 w-2/3 rounded-full bg-white/80"></div>
-              <div class="mb-3 h-3 w-1/2 rounded-full bg-white/70"></div>
-              <div class="h-3 w-5/6 rounded-full bg-white/60"></div>
-            </div>
-          </div>
-          <div class="p-6">
-            <h3 class="text-xl font-black">SQL Business Analysis</h3>
-            <p class="mt-3 leading-7 text-slate-600">SQL queries used to extract insights from business datasets and answer practical questions.</p>
-            <div class="mt-5 flex flex-wrap gap-2">
-              <span class="tag">SQL</span>
-              <span class="tag">Analysis</span>
-            </div>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section id="bike" class="py-20">
-    <div class="mx-auto grid max-w-6xl items-center gap-10 px-5 lg:grid-cols-[0.95fr_1.05fr]">
-      <div>
-        <p class="section-label">Beyond Data</p>
-        <h2 class="mt-3 text-3xl font-black tracking-normal">Bike passion, discipline, and focus.</h2>
-        <p class="mt-5 text-lg leading-8 text-slate-600">
-          Apart from analytics, I am passionate about bikes and long rides. Riding has taught me patience, awareness, discipline, and quick decision-making - qualities I bring into data problem-solving too.
-        </p>
-      </div>
-
-      <div class="grid gap-4 sm:grid-cols-2">
-        <figure
-          class="image-pop overflow-hidden rounded-[2rem] border border-slate-200 bg-white p-3 shadow-soft"
-          onclick="openImageModal('./bikewithjosh.jpeg', 'Joshua with a bike in the mountains')"
-          tabindex="0"
-          role="button"
-          aria-label="Open mountain bike photo"
-          onkeydown="handleImageKey(event, './bikewithjosh.jpeg', 'Joshua with a bike in the mountains')"
-        >
-          <div class="overflow-hidden rounded-[1.5rem]">
-            <img
-              src="./bikewithjosh.jpeg"
-              alt="Joshua with a bike in the mountains"
-              width="900"
-              height="1200"
-              loading="lazy"
-              class="h-96 w-full object-cover object-[45%_center]"
-            />
-          </div>
-          <figcaption class="px-2 pb-2 pt-4 text-sm font-bold text-slate-500">Adventure rides and focus under pressure.</figcaption>
-        </figure>
-
-        <div class="grid gap-4">
-          <figure
-            class="image-pop overflow-hidden rounded-[2rem] border border-slate-200 bg-white p-3 shadow-soft"
-            onclick="openImageModal('./bike.jpeg', 'Royal Enfield bike')"
-            tabindex="0"
-            role="button"
-            aria-label="Open Royal Enfield bike photo"
-            onkeydown="handleImageKey(event, './bike.jpeg', 'Royal Enfield bike')"
-          >
-            <div class="grid h-64 place-items-center overflow-hidden rounded-[1.5rem] bg-slate-100">
-              <img
-                src="./bike.jpeg"
-                alt="Royal Enfield bike"
-                width="900"
-                height="1200"
-                loading="lazy"
-                class="h-full w-full object-contain"
-              />
-            </div>
-          </figure>
-
-          <div class="rounded-[2rem] bg-ink p-6 text-white shadow-soft">
-            <p class="text-sm font-black uppercase tracking-widest text-blue-200">Rider mindset</p>
-            <div class="mt-5 grid grid-cols-3 gap-3">
-              <div>
-                <p class="text-xl font-black text-amber">Focus</p>
-                <p class="mt-1 text-xs font-semibold text-slate-300">Stay aware</p>
-              </div>
-              <div>
-                <p class="text-xl font-black text-blue-200">Calm</p>
-                <p class="mt-1 text-xs font-semibold text-slate-300">Think clear</p>
-              </div>
-              <div>
-                <p class="text-xl font-black text-teal-200">Drive</p>
-                <p class="mt-1 text-xs font-semibold text-slate-300">Keep moving</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact" class="py-20">
-    <div class="mx-auto max-w-6xl px-5">
-      <div class="grid gap-8 rounded-[2rem] bg-ink p-7 text-white shadow-soft md:grid-cols-[0.9fr_1.1fr] md:p-10">
-        <div>
-          <p class="text-sm font-black uppercase tracking-widest text-blue-200">Get In Touch</p>
-          <h2 class="mt-3 text-3xl font-black tracking-normal">Turning data into decisions.</h2>
-          <p class="mt-4 leading-7 text-slate-300">Reach out for analytics projects, internships, dashboards, or collaboration.</p>
-        </div>
-
-        <div class="flex flex-wrap items-center gap-4 pb-8 md:self-end">
-          <a href="https://www.instagram.com/" target="_blank" rel="noreferrer" class="social-link" aria-label="Instagram">Instagram</a>
-          <a href="https://www.linkedin.com/in/joshua-binoyc-a6b527412/" target="_blank" rel="noreferrer" class="social-link" aria-label="LinkedIn">LinkedIn</a>
-          <a href="https://x.com/" target="_blank" rel="noreferrer" class="social-link" aria-label="X">X</a>
-          <a href="https://discord.com/" target="_blank" rel="noreferrer" class="social-link" aria-label="Discord">Discord</a>
-          <a href="mailto:joshuacheliparambilb@gmail.com" class="social-link" aria-label="Email">Email</a>
-          <a href="https://github.com/joshuacheliparambil" target="_blank" rel="noreferrer" class="social-link" aria-label="GitHub">GitHub</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div
-    id="imageModal"
-    class="fixed inset-0 z-[100] hidden items-center justify-center bg-slate-950/85 p-4 backdrop-blur-sm"
-    onclick="closeImageModal()"
-    aria-hidden="true"
-  >
-    <div class="relative max-h-[92vh] w-full max-w-5xl" onclick="event.stopPropagation()">
-      <button
-        type="button"
-        onclick="closeImageModal()"
-        class="absolute -right-2 -top-12 grid h-10 w-10 place-items-center rounded-full bg-white text-xl font-black text-ink shadow-soft transition hover:scale-105"
-        aria-label="Close image preview"
-      >
-        x
-      </button>
-      <img id="modalImage" src="" alt="" class="max-h-[88vh] w-full rounded-[2rem] object-contain shadow-soft" />
-    </div>
-  </div>
-
-  <footer class="border-t border-slate-200 bg-white px-5 py-8 text-center text-sm font-semibold text-slate-500">
-    Copyright 2026 Joshua Binoy. Built with data, design, and discipline.
-  </footer>
+  <footer class="border-t border-slate-200 bg-white px-5 py-8 text-center text-sm font-semibold text-slate-500">Copyright 2026 Joshua Binoy. Built for SDE-1 backend opportunities with Java, JavaScript, SQL, React fundamentals, and discipline.</footer>
 
   <script src="./script.js" defer></script>
 </body>
 </html>
+
+
